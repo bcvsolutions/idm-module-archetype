@@ -142,7 +142,7 @@
 								</goals>
 								<configuration>
 									<backend>html5</backend>
-									<outputDirectory>${asciidoctor.html.output.directory.prefix}/example/${project.version}/doc</outputDirectory>
+									<outputDirectory>${asciidoctor.html.output.directory.prefix}/${moduleName.toLowerCase()}/${project.version}/doc</outputDirectory>
 								</configuration>
 							</execution>
 						</executions>

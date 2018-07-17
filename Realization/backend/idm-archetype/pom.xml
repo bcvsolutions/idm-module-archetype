@@ -5,11 +5,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>eu.bcvsolutions.idm</groupId>
-	<artifactId>idm-archetype</artifactId>
+	<artifactId>idm-module-archetype</artifactId>
 	<version>1.0.0</version>
 	<packaging>maven-archetype</packaging>
 
-	<name>idm-archetype</name>
+	<name>idm-module-archetype</name>
 
 	<build>
 		<extensions>
@@ -30,9 +30,6 @@
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-deploy-plugin</artifactId>
 					<version>2.8.1</version>
-					<configuration>
-						<skip>true</skip>
-					</configuration>
 				</plugin>
 			</plugins>
 		</pluginManagement>

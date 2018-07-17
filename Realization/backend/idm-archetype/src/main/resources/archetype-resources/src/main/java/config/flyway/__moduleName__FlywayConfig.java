@@ -38,9 +38,9 @@ public class ${moduleName}FlywayConfig extends AbstractFlywayConfiguration {
 	@Bean
 	@DependsOn("flywayCore")
 	@ConditionalOnMissingBean(name = "flywayModule${moduleName}")
-	@ConditionalOnExpression("${symbol_dollar}{flyway.enabled:true} && '${symbol_dollar}{flyway.example.locations}'!=''")
+	@ConditionalOnExpression("${symbol_dollar}{flyway.enabled:true} && '${symbol_dollar}{flyway.${moduleName.toLowerCase()}.locations}'!=''")
 	@ConfigurationProperties(prefix = "flyway.${moduleName.toLowerCase()}")
-	public Flyway flywayModuleExample() {
+	public Flyway flywayModule${moduleName}() {
 		Flyway flyway = super.createFlyway();		
 		log.info("Starting flyway migration for ${moduleName.toLowerCase()} module [{}]: ", flyway.getTable());
 		return flyway;

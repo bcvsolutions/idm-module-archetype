@@ -9,7 +9,7 @@ chai.use(dirtyChai);
  * @author ${author}
  */
 describe('Comparing JSON catalogs', function test() {
-  it('- example', function validate() {
+  it('- ${moduleName.toLowerCase()}', function validate() {
     const cs = require('../../src/locales/cs.json');
     const en = require('../../src/locales/en.json');
     //
