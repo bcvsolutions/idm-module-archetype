@@ -1,0 +1,19 @@
+{
+  "name": "czechidm-${moduleName.toLowerCase()}",
+  "version": "${version.toLowerCase()}",
+  "description": "${moduleName} module for CzechIdM devstack.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "CzechIdM",
+    "${moduleName.toLowerCase()}",
+    "IdM"
+  ],
+  "publishConfig": {
+    "registry": "http://nexus.bcvsolutions.eu/repository/npm-private/"
+  },
+  "author": "BCV solutions s.r.o",
+  "license": "MIT"
+}
