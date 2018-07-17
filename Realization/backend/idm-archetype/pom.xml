@@ -1,68 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <groupId>eu.bcvsolutions.idm</groupId>
-  <artifactId>idm-archetype</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
-  <packaging>maven-archetype</packaging>
+	<groupId>eu.bcvsolutions.idm</groupId>
+	<artifactId>idm-archetype</artifactId>
+	<version>1.0.0</version>
+	<packaging>maven-archetype</packaging>
 
-  <name>idm-archetype</name>
+	<name>idm-archetype</name>
 
-  <build>
-    <extensions>
-      <extension>
-        <groupId>org.apache.maven.archetype</groupId>
-        <artifactId>archetype-packaging</artifactId>
-        <version>3.0.1</version>
-      </extension>
-    </extensions>
+	<build>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.archetype</groupId>
+				<artifactId>archetype-packaging</artifactId>
+				<version>3.0.1</version>
+			</extension>
+		</extensions>
 
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <artifactId>maven-archetype-plugin</artifactId>
-          <version>3.0.1</version>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-archetype-plugin</artifactId>
+					<version>3.0.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-deploy-plugin</artifactId>
+					<version>2.8.1</version>
+					<configuration>
+						<skip>true</skip>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 
-  <description>CzechIdM Archetype for creating module.</description>
 
-  <developers>
-    <developer>
-      <id>ZB</id>
-      <name>Zdeněk Burda</name>
-      <roles>
-        <role>Analyst</role>
-        <role>Product Owner</role>
-        <role>Architect</role>
-      </roles>
-    </developer>
-    <developer>
-      <id>VS</id>
-      <name>Vít Švanda</name>
-      <roles>
-        <role>Analyst</role>
-        <role>Developer</role>
-      </roles>
-    </developer>
-    <developer>
-      <id>RT</id>
-      <name>Radek Tomiška</name>
-      <roles>
-        <role>Analyst</role>
-        <role>Developer</role>
-      </roles>
-    </developer>
-    <developer>
-      <id>OK</id>
-      <name>Ondřej Kopr</name>
-      <roles>
-        <role>Developer</role>
-      </roles>
-    </developer>
-  </developers>
-
+	<developers>
+	  <developer>
+	    <id>ZB</id>
+	    <name>Zdeněk Burda</name>
+	    <roles>
+	      <role>Analyst</role>
+	      <role>Product Owner</role>
+	      <role>Architect</role>
+	    </roles>
+	  </developer>
+	  <developer>
+	    <id>VS</id>
+	    <name>Vít Švanda</name>
+	    <roles>
+	      <role>Analyst</role>
+	      <role>Developer</role>
+	    </roles>
+	  </developer>
+	  <developer>
+	    <id>RT</id>
+	    <name>Radek Tomiška</name>
+	    <roles>
+	      <role>Analyst</role>
+	      <role>Developer</role>
+	    </roles>
+	  </developer>
+	  <developer>
+	    <id>OK</id>
+	    <name>Ondřej Kopr</name>
+	    <roles>
+	      <role>Developer</role>
+	    </roles>
+	  </developer>
+	</developers>
+	
+	<description>Archetype for generate skeletop application for new project module (including frontend module).</description>
+	<organization>
+		<name>bcvsolutions.eu</name>
+		<url>http://www.bcvsolutions.eu/</url>
+	</organization>
+	<issueManagement>
+		<system>redmine</system>
+		<url>https://redmine.czechidm.com/</url>
+	</issueManagement>
+  
+	<distributionManagement>
+		<repository>
+			<id>nexus</id>
+			<name>Nexus public releases repo</name>
+			<url>https://nexus.bcvsolutions.eu/repository/maven-public-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexus</id>
+			<name>Nexus Staging repo</name>
+			<url>https://nexus.bcvsolutions.eu/repository/maven-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>
