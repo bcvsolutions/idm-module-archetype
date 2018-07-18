@@ -6,7 +6,7 @@
 
 	<groupId>eu.bcvsolutions.idm</groupId>
 	<artifactId>idm-module-archetype</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>maven-archetype</packaging>
 
 	<name>idm-module-archetype</name>
@@ -33,31 +33,6 @@
 
 
 	<developers>
-	  <developer>
-	    <id>ZB</id>
-	    <name>Zdeněk Burda</name>
-	    <roles>
-	      <role>Analyst</role>
-	      <role>Product Owner</role>
-	      <role>Architect</role>
-	    </roles>
-	  </developer>
-	  <developer>
-	    <id>VS</id>
-	    <name>Vít Švanda</name>
-	    <roles>
-	      <role>Analyst</role>
-	      <role>Developer</role>
-	    </roles>
-	  </developer>
-	  <developer>
-	    <id>RT</id>
-	    <name>Radek Tomiška</name>
-	    <roles>
-	      <role>Analyst</role>
-	      <role>Developer</role>
-	    </roles>
-	  </developer>
 	  <developer>
 	    <id>OK</id>
 	    <name>Ondřej Kopr</name>
