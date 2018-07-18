@@ -72,7 +72,6 @@ $ mvn archetype:generate \
       -DarchetypeVersion=1.0.0 \
       -DartifactId=<artefact-id> \
       -DmoduleName=<module-name> \
-      -DgroupId=<module-group-id> \
       -Dauthor=<author> \
       -Dversion=<version> \
       -DczechIdMVersion=<czechidm-version>
@@ -88,7 +87,7 @@ $ mvn archetype:generate \
 | **-DarchetypeVersion**   | version of archetype  |   | ☑  | ☑ |
 | **-DartifactId**   | artefact id for your now module  | idm-example  | ☑  | ☑ |
 | **-DmoduleName**   | name of your new module. Firts letter must be uppercase  | Example  | ☑  | ☑ |
-| **-DgroupId**   | group id of your new module  | eu.bcvsolutions.idm  | ☑  | ☑ |
+| **-DgroupId**   | group id of your new module  | eu.bcvsolutions.idm  | ☑  | ☐ |
 | **-Dauthor**   | You :)  | example  |  ☑ | ☑ |
 | **-Dversion**   | version of your new module  | 1.0.0-SNAPSHOT  | ☑  | ☑ |
 | **-DczechIdMVersion**   | version for dependency on CzechIdM product   | 8.1.3  | ☑ | ☑  |
@@ -104,7 +103,6 @@ $ mvn archetype:generate \
       -DarchetypeVersion=1.0.0 \
       -DartifactId=idm-dojo \
       -DmoduleName=Dojo \
-      -DgroupId=eu.bcvsolutions.idm \
       -Dauthor='John Doe' \
       -Dversion=1.0.0-SNAPSHOT \
       -DczechIdMVersion=8.1.3
@@ -139,3 +137,6 @@ Example remove pom (linux based system):
 
   * Create script for generate archetype (via maven) and then remove unless pom.xml,
   * create second archetype for create app project (FE+BE).
+
+  ## Know issues
+  * now isn't possible modify groupId for your project, becouse CzechIdM application doesn't support another groupId than **eu.bcvsolutions.idm**
