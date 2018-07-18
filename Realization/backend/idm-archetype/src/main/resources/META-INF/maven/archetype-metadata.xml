@@ -16,45 +16,12 @@
 	
 	<fileSets>
 		<fileSet filtered="true" packaged="false" encoding="UTF-8">
-			<directory>frontend</directory>
+			<directory>Realization</directory>
 			<includes>
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
-		<fileSet filtered="true" packaged="true" encoding="UTF-8">
-			<directory>src/main/java</directory>
-			<includes>
-				<include>**/*.java</include>
-			</includes>
-			<excludes>
-				<exclude>**/.*</exclude>
-			</excludes>
-		</fileSet>
-		<fileSet filtered="true" encoding="UTF-8">
-			<directory>src/main/resources</directory>
-			<includes>
-				<include>**/*.txt</include>
-				<include>**/*.properties</include>
-			</includes>
-		</fileSet>
-		<fileSet encoding="UTF-8">
-			<directory>src/main/resources</directory>
-			<includes>
-				<include>**/*.sql</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" packaged="true" encoding="UTF-8">
-			<directory>src/test/java</directory>
-			<includes>
-				<include>**/*.java</include>
-			</includes>
-		</fileSet>
-		<fileSet filtered="true" encoding="UTF-8">
-			<directory>src/test/resources</directory>
-			<includes>
-				<include>**/*.xml</include>
-				<include>**/*.properties</include>
-			</includes>
-		</fileSet>
+		<!-- TODO exlude root pom.xml -->
 	</fileSets>
+	
 </archetype-descriptor>

@@ -67,7 +67,7 @@
 	  </developer>
 	</developers>
 	
-	<description>Archetype for generate skeletop application for new project module (including frontend module).</description>
+	<description>Archetype for generating skeleton application for new project module (including frontend module).</description>
 	<organization>
 		<name>bcvsolutions.eu</name>
 		<url>http://www.bcvsolutions.eu/</url>

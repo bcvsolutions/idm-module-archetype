@@ -1,16 +1,26 @@
-# Idm module archetype
+# CzechIdM module archetype
 Archetype generate basic skeleton application for our devstack, including backend and frontend module.
 
 With this archetype you can easily generate app skeleton. With this folder structure:
 
 ```
 ./idm-<your-artefact-id>/
- ├── frontend/                          ⟵ frontend module, copy this folder anywhere you want
- |   └── czechidm-<your-artefact-id>/
- ├── src                                ⟵ backend module sources
- |   ├── main/
- |   └── test/
- └── pom.xml                            ⟵ project pom.xml
+ ├── Realization/                           ⟵ Realization folder (contains FE + BE)
+ |   ├── frontend                           ⟵ frontend module
+ |   |   └── czechidm-<your-artefact-id>/
+ |   |       ├── src                        ⟵ frontend sources
+ |   |       ├── test                       ⟵ frontend tests
+ |   |       ├── component-descriptor.js
+ |   |       ├── module-descriptor.js
+ |   |       ├── package.json
+ |   |       └── routes.js
+ |   └── backend                            ⟵ backend module
+ |       └── idm-<your-artefact-id>/
+ |           ├── src                        ⟵ backend sources
+ |           |   ├── main/
+ |           |   └── test/
+ |           └── pom.xml                    ⟵ backend pom.xml
+ └── pom.xml                                ⟵ artefact pom.xml (you can remove this pom)
 ```
 
 ## Generate new module
@@ -56,6 +66,7 @@ Go to project folder where you want generate new project module. And generate pr
 ```
 $ mvn archetype:generate \
       -Pczechidm-public-repo \
+      -DinteractiveMode=false \
       -DarchetypeGroupId=eu.bcvsolutions.idm \
       -DarchetypeArtifactId=idm-module-archetype \
       -DarchetypeVersion=1.0.0 \
@@ -71,6 +82,7 @@ $ mvn archetype:generate \
 | Parameter   |      Info      |      Default value      |      Required     |      You can modify     |
 |----------|:-------------:|:-------------:|:-------------:|:-------------:|
 | **-Pczechidm-public-repo** | profile for connection to our nexus. Defined in **settings.xml**  | *(without value)* | ☑ | ☐ |
+| **-DinteractiveMode=false**   | Skip interactive mode for generate archetyepe  | false  | ☐  | ☑  |
 | **-DarchetypeGroupId** |  archetype group id  | eu.bcvsolutions.idm  | ☑  | ☐ |
 | **-DarchetypeArtifactId**  |  archetype artefact id.  | idm-module-archetype  | ☑  | ☐ |
 | **-DarchetypeVersion**   | version of archetype  |   | ☑  | ☑ |
@@ -86,6 +98,7 @@ $ mvn archetype:generate \
 ```
 $ mvn archetype:generate \
       -Pczechidm-public-repo \
+      -DinteractiveMode=false \
       -DarchetypeGroupId=eu.bcvsolutions.idm \
       -DarchetypeArtifactId=idm-module-archetype \
       -DarchetypeVersion=1.0.0 \
@@ -99,35 +112,30 @@ $ mvn archetype:generate \
 
 ### After run command
 
-After you execute generate command, maven archetype shows to you some information about progress. First you needed interact is
-
-``Define value for property 'moduleNameLower' ${moduleName.toLowerCase()}: : █``
-
-Please there dont modify input and just press enter.
-
-Next step is only informative, maven archetype plugin shows to you last check before generate new module. For example:
-
-```
-Confirm properties configuration:
-groupId: eu.bcvsolutions.idm
-artifactId: idm-dojo
-version: 1.0.0-SNAPSHOT
-package: eu.bcvsolutions.idm
-author: John Doe
-czechIdMVersion: 8.1.3
-moduleName: Dojo
-moduleNameLower: ${moduleName.toLowerCase()}
- Y: : █
-```
-
-After check plese press enter.
-
 Complete build ended with this status:
 
 ``[INFO] BUILD SUCCESS``
 
 Archetype generate frontend module as part of backend module. You can easily copy frontend folder from backend module.
 
+In newly generated project exists unless pom.xml in root of your project, please remove this pom.xml, example:
+
+```
+./idm-<your-artefact-id>/
+ ├── Realization/
+ |   ├── frontend
+ |   └── backend
+ └── pom.xml               ⟵ REMOVE THIS POM.XML
+```
+
+Example remove pom (linux based system):
+``$ rm /idm-<your-artefact-id>/pom.xml``
+
  ## License
 
  [MIT License](./LICENSE)
+
+  ## TODO`s
+
+  * Create script for generate archetype (via maven) and then remove unless pom.xml,
+  * create second archetype for create app project (FE+BE).

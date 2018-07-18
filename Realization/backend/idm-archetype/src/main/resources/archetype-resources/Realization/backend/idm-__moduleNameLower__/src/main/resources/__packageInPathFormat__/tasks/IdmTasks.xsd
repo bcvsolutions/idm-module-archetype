@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="parameter" type="idmScheduledTaskParameterType"/>
+
+  <xs:element name="parameters" type="idmScheduledTaskParametersType"/>
+
+  <xs:element name="task" type="idmScheduledTaskType"/>
+
+  <xs:element name="tasks" type="idmScheduledTasksType"/>
+
+  <xs:element name="trigger" type="idmScheduledTaskTriggerType"/>
+
+  <xs:element name="triggers" type="idmScheduledTaskTriggersType"/>
+
+  <xs:complexType name="idmScheduledTasksType">
+    <xs:sequence>
+      <xs:element ref="task" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="idmScheduledTaskType">
+    <xs:sequence>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="instanceId" type="xs:string"/>
+      <xs:element name="taskType" type="xs:string"/>
+      <xs:element ref="parameters" minOccurs="0"/>
+      <xs:element ref="triggers" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="idmScheduledTaskParametersType">
+    <xs:sequence>
+      <xs:element name="parameter" type="idmScheduledTaskParameterType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="idmScheduledTaskParameterType">
+    <xs:sequence>
+      <xs:element name="key" type="xs:string"/>
+      <xs:element name="value" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="idmScheduledTaskTriggersType">
+    <xs:sequence>
+      <xs:element name="trigger" type="idmScheduledTaskTriggerType" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="idmScheduledTaskTriggerType">
+    <xs:sequence>
+      <xs:element name="type" type="xs:string"/>
+      <xs:element name="cron" type="xs:string" minOccurs="0"/>
+      <xs:element name="state" type="xs:string" minOccurs="0"/>
+      <xs:element name="description" type="xs:string" minOccurs="0"/>
+      <xs:element name="fireTime" type="dateTime" minOccurs="0"/>
+      <xs:element name="nextFireTime" type="dateTime" minOccurs="0"/>
+      <xs:element name="previousFireTime" type="dateTime" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="dateTime" final="extension restriction">
+    <xs:complexContent>
+      <xs:extension base="baseDateTime">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="baseDateTime" abstract="true">
+    <xs:complexContent>
+      <xs:extension base="abstractDateTime">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="abstractDateTime" abstract="true">
+    <xs:complexContent>
+      <xs:extension base="abstractInstant">
+        <xs:sequence/>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+
+  <xs:complexType name="abstractInstant" abstract="true">
+    <xs:sequence/>
+  </xs:complexType>
+</xs:schema>
+

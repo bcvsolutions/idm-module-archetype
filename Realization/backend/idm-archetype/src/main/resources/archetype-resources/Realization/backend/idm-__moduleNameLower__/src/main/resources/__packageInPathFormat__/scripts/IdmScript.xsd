@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:element name="allowClass" type="idmScriptAllowClassType" />
+
+	<xs:element name="allowClasses" type="idmScriptAllowClassesType" />
+
+	<xs:element name="script" type="idmScriptType" />
+
+	<xs:element name="service" type="idmScriptServiceType" />
+
+	<xs:element name="services" type="idmScriptServicesType" />
+
+	<xs:complexType name="idmScriptType">
+		<xs:sequence>
+			<xs:element name="code" type="xs:string" />
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="body" type="xs:string" minOccurs="0" />
+			<xs:element name="type" type="xs:string" minOccurs="0" />
+			<xs:element name="category" type="idmScriptCategory"
+				minOccurs="0" />
+			<xs:element name="parameters" type="xs:string" minOccurs="0" />
+			<xs:element name="description" type="xs:string" minOccurs="0" />
+			<xs:element ref="services" minOccurs="0" />
+			<xs:element ref="allowClasses" minOccurs="0" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="idmScriptAllowClassesType">
+		<xs:sequence>
+			<xs:element ref="allowClass" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="idmScriptAllowClassType">
+		<xs:sequence>
+			<xs:element name="className" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="idmScriptServicesType">
+		<xs:sequence>
+			<xs:element ref="service" minOccurs="0" maxOccurs="unbounded" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="idmScriptServiceType">
+		<xs:sequence>
+			<xs:element name="name" type="xs:string" />
+			<xs:element name="className" type="xs:string" />
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="idmScriptCategory">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="DEFAULT" />
+			<xs:enumeration value="TRANSFORM_FROM" />
+			<xs:enumeration value="TRANSFORM_TO" />
+			<xs:enumeration value="SYSTEM" />
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>
+
