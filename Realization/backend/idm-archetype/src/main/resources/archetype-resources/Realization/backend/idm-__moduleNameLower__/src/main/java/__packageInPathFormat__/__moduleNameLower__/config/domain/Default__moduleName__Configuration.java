@@ -1,11 +1,11 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.config.domain;
+package ${groupId}.${moduleName.toLowerCase()}.config.domain;
 
 import org.springframework.stereotype.Component;
 
-import ${groupId}.core.api.config.domain.AbstractConfiguration;
+import ${czechIdMGroupId}.core.api.config.domain.AbstractConfiguration;
 
 /**
  * ${moduleName} configuration - implementation

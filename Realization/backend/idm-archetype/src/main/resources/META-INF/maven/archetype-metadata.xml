@@ -12,6 +12,9 @@
 		<requiredProperty key="moduleNameLower">
 			<defaultValue>${moduleName.toLowerCase()}</defaultValue>
 		</requiredProperty>
+		<requiredProperty key="czechIdMGroupId">
+			<defaultValue>eu.bcvsolutions.idm</defaultValue>
+		</requiredProperty>
 	</requiredProperties>
 	
 	<fileSets>

@@ -6,4 +6,4 @@
  * 
  * @author ${author}
  */
-package ${package};
+package ${package}.${moduleName.toLowerCase()};

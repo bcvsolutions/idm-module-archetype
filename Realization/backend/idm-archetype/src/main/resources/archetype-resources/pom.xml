@@ -10,7 +10,9 @@
 
 	<artifactId>${artifactId}</artifactId>
 
+	#if (${groupId} != 'eu.bcvsolutions.idm')
 	<groupId>${groupId}</groupId>
+	#end
 	<packaging>jar</packaging>
 
 	<name>CzechIdM Module ${moduleName}</name>
@@ -55,12 +57,12 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>${project.groupId}</groupId>
+			<groupId>${czechIdMGroupId}</groupId>
 			<artifactId>idm-core-impl</artifactId>
 			<version>${czechidm-version}</version>
 		</dependency>
 		<dependency>
-			<groupId>${project.groupId}</groupId>
+			<groupId>${czechIdMGroupId}</groupId>
 			<artifactId>idm-core-test-api</artifactId>
 			<version>${czechidm-version}</version>
 			<scope>test</scope>

@@ -1,7 +1,7 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.config.flyway;
+package ${package}.${moduleName.toLowerCase()}.config.flyway;
 
 import org.flywaydb.core.Flyway;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
@@ -17,8 +17,8 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.context.annotation.PropertySource;
 
-import ${groupId}.core.api.config.flyway.AbstractFlywayConfiguration;
-import ${groupId}.core.api.config.flyway.IdmFlywayAutoConfiguration;
+import ${czechIdMGroupId}.core.api.config.flyway.AbstractFlywayConfiguration;
+import ${czechIdMGroupId}.core.api.config.flyway.IdmFlywayAutoConfiguration;
 
 /**
  * DB migration for ${moduleName} module

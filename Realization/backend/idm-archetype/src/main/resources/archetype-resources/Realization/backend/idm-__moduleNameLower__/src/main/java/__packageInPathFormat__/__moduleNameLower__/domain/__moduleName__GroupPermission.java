@@ -1,15 +1,15 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.domain;
+package ${package}.${moduleName.toLowerCase()}.domain;
 
 import java.util.Arrays;
 import java.util.List;
 
 import eu.bcvsolutions.idm.core.security.api.domain.BasePermission;
 import eu.bcvsolutions.idm.core.security.api.domain.IdmBasePermission;
-import ${groupId}.core.security.api.domain.GroupPermission;
-import ${package}.${moduleName}ModuleDescriptor;
+import ${czechIdMGroupId}.core.security.api.domain.GroupPermission;
+import ${package}.${moduleName.toLowerCase()}.${moduleName}ModuleDescriptor;
 
 /**
  * Aggregate base permission. Name can't contain character '_' - its used for joining to authority name.

@@ -1,16 +1,16 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.config.swagger;
+package ${package}.${moduleName.toLowerCase()}.config.swagger;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import ${groupId}.core.api.config.swagger.AbstractSwaggerConfig;
-import ${groupId}.core.api.domain.ModuleDescriptor;
-import ${package}.${moduleName}ModuleDescriptor;
+import ${czechIdMGroupId}.core.api.config.swagger.AbstractSwaggerConfig;
+import ${czechIdMGroupId}.core.api.domain.ModuleDescriptor;
+import ${package}.${moduleName.toLowerCase()}.${moduleName}ModuleDescriptor;
 import springfox.documentation.spring.web.plugins.Docket;
 
 /**

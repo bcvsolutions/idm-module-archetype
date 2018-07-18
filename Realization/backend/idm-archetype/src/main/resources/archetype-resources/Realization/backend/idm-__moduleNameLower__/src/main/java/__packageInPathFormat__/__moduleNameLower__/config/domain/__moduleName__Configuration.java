@@ -1,12 +1,12 @@
 #set( $symbol_pound = '#' )
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
-package ${package}.config.domain;
+package ${groupId}.${moduleName.toLowerCase()}.config.domain;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import ${groupId}.core.api.service.Configurable;
+import ${czechIdMGroupId}.core.api.service.Configurable;
 
 /**
  * ${moduleName} configuration - interface

@@ -2,11 +2,11 @@
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
 #set( $moduleNameLower = ${moduleName.toLowerCase()} )
-package ${package}.domain;
+package ${package}.${moduleName.toLowerCase()}.domain;
 
 import org.springframework.http.HttpStatus;
 
-import ${groupId}.core.api.domain.ResultCode;
+import ${czechIdMGroupId}.core.api.domain.ResultCode;
 
 /**
  * Enum class for formatting response messages (mainly errors). 

@@ -2,7 +2,7 @@
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
 #set( $moduleNameLower = ${moduleName.toLowerCase()} )
-package ${package};
+package ${package}.${moduleName.toLowerCase()};
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -12,12 +12,12 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.stereotype.Component;
 
-import ${groupId}.core.api.domain.PropertyModuleDescriptor;
-import ${groupId}.core.api.domain.ResultCode;
-import ${groupId}.core.notification.api.dto.NotificationConfigurationDto;
-import ${groupId}.core.security.api.domain.GroupPermission;
-import ${package}.domain.${moduleName}GroupPermission;
-import ${package}.domain.${moduleName}ResultCode;
+import ${czechIdMGroupId}.core.api.domain.PropertyModuleDescriptor;
+import ${czechIdMGroupId}.core.api.domain.ResultCode;
+import ${czechIdMGroupId}.core.notification.api.dto.NotificationConfigurationDto;
+import ${czechIdMGroupId}.core.security.api.domain.GroupPermission;
+import ${package}.${moduleName.toLowerCase()}.domain.${moduleName}GroupPermission;
+import ${package}.${moduleName.toLowerCase()}.domain.${moduleName}ResultCode;
 
 /**
  * ${moduleName} module descriptor

@@ -2,7 +2,7 @@
 #set( $symbol_dollar = '$' )
 #set( $symbol_escape = '\' )
 #set( $moduleNameLower = "${moduleName.toLowerCase()}" )
-package ${package};
+package ${package}.${moduleName.toLowerCase()};
 
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.annotation.DependsOn;
