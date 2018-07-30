@@ -24,7 +24,7 @@ With this archetype you can easily generate app skeleton. With this folder struc
 ```
 
 ## Generate new module
-This is tutorial describes step by step how to generate new module (FE+BE) for CzechIdM. This tutorial excepted installed **maven**.
+This is tutorial describes step by step how to generate new module (FE+BE) for CzechIdM. This tutorial expected installed **maven**.
 
 ### Create/update your maven settings.xml
 
@@ -37,7 +37,7 @@ Into this file add new profile with archetype definition. Example:
 ```
 <settings>
     ...
-    </profiles>
+    <profiles>
       ...
       <profile>
         <id>czechidm-public-repo</id>
