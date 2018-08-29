@@ -9,6 +9,9 @@
 		<requiredProperty key="author" />
 		<requiredProperty key="moduleName" />
 		<requiredProperty key="czechIdMVersion" />
+		<requiredProperty key="groupId">
+			<defaultValue>eu.bcvsolutions.idm</defaultValue>
+		</requiredProperty>
 		<requiredProperty key="moduleNameLower">
 			<defaultValue>${moduleName.toLowerCase()}</defaultValue>
 		</requiredProperty>
