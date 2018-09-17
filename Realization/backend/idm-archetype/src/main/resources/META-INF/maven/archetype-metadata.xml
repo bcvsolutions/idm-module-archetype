@@ -27,6 +27,12 @@
 				<include>**/*.*</include>
 			</includes>
 		</fileSet>
+		<fileSet>
+			<directory></directory>
+			<includes>
+				<include>.gitignore</include>
+			</includes>
+		</fileSet>
 		<!-- TODO exlude root pom.xml -->
 	</fileSets>
 	

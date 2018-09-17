@@ -69,7 +69,7 @@ $ mvn archetype:generate \
       -DinteractiveMode=false \
       -DarchetypeGroupId=eu.bcvsolutions.idm \
       -DarchetypeArtifactId=idm-module-archetype \
-      -DarchetypeVersion=1.0.1 \
+      -DarchetypeVersion=1.0.2 \
       -DartifactId=<artefact-id> \
       -DmoduleName=<module-name> \
       -Dauthor=<author> \
@@ -100,7 +100,7 @@ $ mvn archetype:generate \
       -DinteractiveMode=false \
       -DarchetypeGroupId=eu.bcvsolutions.idm \
       -DarchetypeArtifactId=idm-module-archetype \
-      -DarchetypeVersion=1.0.1 \
+      -DarchetypeVersion=1.0.2 \
       -DartifactId=idm-dojo \
       -DmoduleName=Dojo \
       -Dauthor='John Doe' \

@@ -6,7 +6,7 @@
 
 	<groupId>eu.bcvsolutions.idm</groupId>
 	<artifactId>idm-module-archetype</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 
 	<name>idm-module-archetype</name>
@@ -51,7 +51,7 @@
 		<system>redmine</system>
 		<url>https://redmine.czechidm.com/</url>
 	</issueManagement>
-  
+
 	<distributionManagement>
 		<repository>
 			<id>nexus</id>
