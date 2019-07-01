@@ -112,7 +112,7 @@ $ mvn archetype:generate \
 
 **Minimalistic example:**
 
-Archetype is placed in public maven repository - latest version is used by default.
+Archetype is placed in public maven repository - latest IdM version is used by default, Dojo module is generated.
 
 ```
 $ mvn archetype:generate \
