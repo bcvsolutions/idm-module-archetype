@@ -9,8 +9,15 @@
 		<requiredProperty key="author">
 			<defaultValue>BCV solutions s.r.o.</defaultValue>
 		</requiredProperty>
-		<requiredProperty key="mid"/> <!-- Module identifier - three letters preffered -->
-		<requiredProperty key="mn"/> <!-- Module Name - three letters preffered, capitalize -->
+		<requiredProperty key="artifactId"> <!-- Module identifier - three letters preffered -->
+			<defaultValue>idm-dojo</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="mid"> <!-- Module identifier - three letters preffered -->
+			<defaultValue>dojo</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="mn"> <!-- Module Name - three letters preffered, capitalize -->
+			<defaultValue>Dojo</defaultValue>
+		</requiredProperty>
 		<requiredProperty key="czechIdMVersion">
 			<defaultValue>9.6.6</defaultValue>
 		</requiredProperty>
@@ -19,6 +26,9 @@
 		</requiredProperty>
 		<requiredProperty key="czechIdMGroupId">
 			<defaultValue>eu.bcvsolutions.idm</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="version">
+			<defaultValue>1.0.0-SNAPSHOT</defaultValue>
 		</requiredProperty>
 	</requiredProperties>
 
