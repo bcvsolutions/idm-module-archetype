@@ -6,20 +6,22 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 	<requiredProperties>
-		<requiredProperty key="author" />
-		<requiredProperty key="moduleName" />
-		<requiredProperty key="czechIdMVersion" />
+		<requiredProperty key="author">
+			<defaultValue>BCV solutions s.r.o.</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="mid"/> <!-- Module identifier - three letters preffered -->
+		<requiredProperty key="mn"/> <!-- Module Name - three letters preffered, capitalize -->
+		<requiredProperty key="czechIdMVersion">
+			<defaultValue>9.6.6</defaultValue>
+		</requiredProperty>
 		<requiredProperty key="groupId">
 			<defaultValue>eu.bcvsolutions.idm</defaultValue>
-		</requiredProperty>
-		<requiredProperty key="moduleNameLower">
-			<defaultValue>${moduleName.toLowerCase()}</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="czechIdMGroupId">
 			<defaultValue>eu.bcvsolutions.idm</defaultValue>
 		</requiredProperty>
 	</requiredProperties>
-	
+
 	<fileSets>
 		<fileSet filtered="true" packaged="false" encoding="UTF-8">
 			<directory>Realization</directory>
@@ -35,5 +37,5 @@
 		</fileSet>
 		<!-- TODO exlude root pom.xml -->
 	</fileSets>
-	
+
 </archetype-descriptor>

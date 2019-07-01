@@ -69,7 +69,7 @@ $ mvn archetype:generate \
       -DinteractiveMode=false \
       -DarchetypeGroupId=eu.bcvsolutions.idm \
       -DarchetypeArtifactId=idm-module-archetype \
-      -DarchetypeVersion=1.0.2 \
+      -DarchetypeVersion=1.0.3 \
       -DartifactId=<artefact-id> \
       -DmoduleName=<module-name> \
       -Dauthor=<author> \
@@ -100,12 +100,13 @@ $ mvn archetype:generate \
       -DinteractiveMode=false \
       -DarchetypeGroupId=eu.bcvsolutions.idm \
       -DarchetypeArtifactId=idm-module-archetype \
-      -DarchetypeVersion=1.0.2 \
+      -DarchetypeVersion=1.0.3 \
       -DartifactId=idm-dojo \
       -DmoduleName=Dojo \
+      -DmoduleId=dj \
       -Dauthor='John Doe' \
       -Dversion=1.0.0-SNAPSHOT \
-      -DczechIdMVersion=8.1.3
+      -DczechIdMVersion=9.6.6
 ```
 
 ### After run command
