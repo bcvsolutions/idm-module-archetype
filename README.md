@@ -69,7 +69,7 @@ $ mvn archetype:generate \
       -DinteractiveMode=false \
       -DarchetypeGroupId=eu.bcvsolutions.idm \
       -DarchetypeArtifactId=idm-module-archetype \
-      -DarchetypeVersion=1.0.4 \
+      -DarchetypeVersion=1.0.8 \
       -DartifactId=<artefact-id> \
       -Dmid=<module-identifier> \
       -Dmn=<module-name> \
@@ -87,8 +87,8 @@ $ mvn archetype:generate \
 | **-DarchetypeArtifactId**  |  Archetype artefact id.  | idm-module-archetype  | ☑  | ☐ |
 | **-DarchetypeVersion**   | Version of archetype  |   | ☑  | ☑ |
 | **-DartifactId**   | Artefact id for your now module  | idm-dojo  | ☑  | ☑ |
-| **-Dmid**   | Identifier of your new module. Lower case, three letters preferred. | dojo | ☑  | ☑ |
-| **-Dmn**   | Name of your new module. Firts letter must be uppercase.  Three letters preferred. Used as classes prefix.  | Dojo  | ☑  | ☑ |
+| **-Dmid**   | **Identifier of your new module**. Lower case, three letters preferred. | dojo | ☑  | ☑ |
+| **-Dmn**   | **Short name of your new module**. Usage of ``mid`` with the first uppercase  letter is preferred.  Three letters preferred. Used as classes prefix.  | Dojo  | ☑  | ☑ |
 | **-Dauthor**   | You :)  | BCV solutions s.r.o.  |  ☑ | ☑ |
 | **-Dversion**   | Version of your new module  | 1.0.0-SNAPSHOT  | ☑  | ☑ |
 | **-DczechIdMVersion**   | Version for dependency on CzechIdM product.   | 9.6.6  | ☑ | ☑  |
@@ -101,7 +101,7 @@ $ mvn archetype:generate \
       -DinteractiveMode=false \
       -DarchetypeGroupId=eu.bcvsolutions.idm \
       -DarchetypeArtifactId=idm-module-archetype \
-      -DarchetypeVersion=1.0.7 \
+      -DarchetypeVersion=1.0.8 \
       -DartifactId=idm-dojo \
       -Dmid=dojo \
       -Dmn=Dojo \
@@ -112,15 +112,18 @@ $ mvn archetype:generate \
 
 **Minimalistic example:**
 
-Archetype is placed in public maven repository - latest IdM version is used by default, Dojo module is generated.
+Archetype is placed in public maven repository, **Dojo** module is generated using default values.
 
 ```
 $ mvn archetype:generate \
       -Pczechidm-public-repo \
       -DinteractiveMode=false \
       -DarchetypeGroupId=eu.bcvsolutions.idm \
-      -DarchetypeArtifactId=idm-module-archetype
-      -DarchetypeVersion=1.0.7 \
+      -DarchetypeArtifactId=idm-module-archetype \
+      -DarchetypeVersion=1.0.8 \
+      -DartifactId=idm-dojo \
+      -Dmid=dojo \
+      -Dmn=Dojo
 ```
 
 ### After run command

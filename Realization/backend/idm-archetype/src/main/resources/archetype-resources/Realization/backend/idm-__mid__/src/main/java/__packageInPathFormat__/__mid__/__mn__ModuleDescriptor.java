@@ -36,7 +36,7 @@ public class ${mn}ModuleDescriptor extends PropertyModuleDescriptor {
 	}
 
 	/**
-	 * Enables links to swagger documention
+	 * Enables links to swagger documentation
 	 */
 	@Override
 	public boolean isDocumentationAvailable() {

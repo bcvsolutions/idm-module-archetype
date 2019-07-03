@@ -17,8 +17,7 @@ public interface ${mn}Configuration extends Configurable {
 
 	@Override
 	default String getConfigurableType() {
-		// please define your own configurable type there
-		return "${mid}";
+		return "configuration";
 	}
 
 	@Override
