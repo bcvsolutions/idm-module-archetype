@@ -6,28 +6,41 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 
 	<requiredProperties>
-		<requiredProperty key="author" />
-		<requiredProperty key="moduleName" />
-		<requiredProperty key="czechIdMVersion" />
+		<requiredProperty key="author">
+			<defaultValue>BCV solutions s.r.o.</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="artifactId"> <!-- Module identifier - three letters preffered -->
+			<defaultValue>idm-dojo</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="mid"> <!-- Module identifier - three letters preffered -->
+			<defaultValue>dojo</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="mn"> <!-- Module Name - three letters preffered, capitalize -->
+			<defaultValue>Dojo</defaultValue>
+		</requiredProperty>
+		<requiredProperty key="czechIdMVersion">
+			<defaultValue>9.6.6</defaultValue>
+		</requiredProperty>
 		<requiredProperty key="groupId">
 			<defaultValue>eu.bcvsolutions.idm</defaultValue>
-		</requiredProperty>
-		<requiredProperty key="moduleNameLower">
-			<defaultValue>${moduleName.toLowerCase()}</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="czechIdMGroupId">
 			<defaultValue>eu.bcvsolutions.idm</defaultValue>
 		</requiredProperty>
+		<requiredProperty key="version">
+			<defaultValue>1.0.0-SNAPSHOT</defaultValue>
+		</requiredProperty>
 	</requiredProperties>
-	
+
 	<fileSets>
 		<fileSet filtered="true" packaged="false" encoding="UTF-8">
 			<directory>Realization</directory>
 			<includes>
 				<include>**/*.*</include>
+				<include>**/.gitignore</include>
 			</includes>
 		</fileSet>
 		<!-- TODO exlude root pom.xml -->
 	</fileSets>
-	
+
 </archetype-descriptor>

@@ -4,10 +4,10 @@ Archetype generate basic skeleton application for our devstack, including backen
 With this archetype you can easily generate app skeleton. With this folder structure:
 
 ```
-./idm-<your-artefact-id>/
+./idm-<mid>/
  ├── Realization/                           ⟵ Realization folder (contains FE + BE)
  |   ├── frontend                           ⟵ frontend module
- |   |   └── czechidm-<your-artefact-id>/
+ |   |   └── czechidm-<mid>/
  |   |       ├── src                        ⟵ frontend sources
  |   |       ├── test                       ⟵ frontend tests
  |   |       ├── component-descriptor.js
@@ -15,7 +15,7 @@ With this archetype you can easily generate app skeleton. With this folder struc
  |   |       ├── package.json
  |   |       └── routes.js
  |   └── backend                            ⟵ backend module
- |       └── idm-<your-artefact-id>/
+ |       └── idm-<mid>/
  |           ├── src                        ⟵ backend sources
  |           |   ├── main/
  |           |   └── test/
@@ -69,9 +69,10 @@ $ mvn archetype:generate \
       -DinteractiveMode=false \
       -DarchetypeGroupId=eu.bcvsolutions.idm \
       -DarchetypeArtifactId=idm-module-archetype \
-      -DarchetypeVersion=1.0.1 \
+      -DarchetypeVersion=1.0.8 \
       -DartifactId=<artefact-id> \
-      -DmoduleName=<module-name> \
+      -Dmid=<module-identifier> \
+      -Dmn=<module-name> \
       -Dauthor=<author> \
       -Dversion=<version> \
       -DczechIdMVersion=<czechidm-version>
@@ -80,17 +81,17 @@ $ mvn archetype:generate \
 
 | Parameter   |      Info      |      Default value      |      Required     |      You can modify     |
 |----------|:-------------:|:-------------:|:-------------:|:-------------:|
-| **-Pczechidm-public-repo** | profile for connection to our nexus. Defined in **settings.xml**  | *(without value)* | ☑ | ☐ |
+| **-Pczechidm-public-repo** | Profile for connection to our nexus. Defined in **settings.xml**  | *(without value)* | ☑ | ☐ |
 | **-DinteractiveMode=false**   | Skip interactive mode for generate archetyepe  | false  | ☐  | ☑  |
-| **-DarchetypeGroupId** |  archetype group id  | eu.bcvsolutions.idm  | ☑  | ☐ |
-| **-DarchetypeArtifactId**  |  archetype artefact id.  | idm-module-archetype  | ☑  | ☐ |
-| **-DarchetypeVersion**   | version of archetype  |   | ☑  | ☑ |
-| **-DartifactId**   | artefact id for your now module  | idm-example  | ☑  | ☑ |
-| **-DmoduleName**   | name of your new module. Firts letter must be uppercase  | Example  | ☑  | ☑ |
-| **-DgroupId**   | group id of your new module  | eu.bcvsolutions.idm  | ☑  | ☐ |
-| **-Dauthor**   | You :)  | example  |  ☑ | ☑ |
-| **-Dversion**   | version of your new module  | 1.0.0-SNAPSHOT  | ☑  | ☑ |
-| **-DczechIdMVersion**   | version for dependency on CzechIdM product   | 8.1.3  | ☑ | ☑  |
+| **-DarchetypeGroupId** |  Archetype group id  | eu.bcvsolutions.idm  | ☑  | ☐ |
+| **-DarchetypeArtifactId**  |  Archetype artefact id.  | idm-module-archetype  | ☑  | ☐ |
+| **-DarchetypeVersion**   | Version of archetype  |   | ☑  | ☑ |
+| **-DartifactId**   | Artefact id for your now module  | idm-dojo  | ☑  | ☑ |
+| **-Dmid**   | **Identifier of your new module**. Lower case, three letters preferred. | dojo | ☑  | ☑ |
+| **-Dmn**   | **Short name of your new module**. Usage of ``mid`` with the first uppercase  letter is preferred.  Three letters preferred. Used as classes prefix.  | Dojo  | ☑  | ☑ |
+| **-Dauthor**   | You :)  | BCV solutions s.r.o.  |  ☑ | ☑ |
+| **-Dversion**   | Version of your new module  | 1.0.0-SNAPSHOT  | ☑  | ☑ |
+| **-DczechIdMVersion**   | Version for dependency on CzechIdM product.   | 9.6.6  | ☑ | ☑  |
 
 **Full example:**
 
@@ -100,12 +101,29 @@ $ mvn archetype:generate \
       -DinteractiveMode=false \
       -DarchetypeGroupId=eu.bcvsolutions.idm \
       -DarchetypeArtifactId=idm-module-archetype \
-      -DarchetypeVersion=1.0.1 \
+      -DarchetypeVersion=1.0.8 \
       -DartifactId=idm-dojo \
-      -DmoduleName=Dojo \
-      -Dauthor='John Doe' \
+      -Dmid=dojo \
+      -Dmn=Dojo \
+      -Dauthor='Awesome developer' \
       -Dversion=1.0.0-SNAPSHOT \
-      -DczechIdMVersion=8.1.3
+      -DczechIdMVersion=9.6.6
+```
+
+**Minimalistic example:**
+
+Archetype is placed in public maven repository, **Dojo** module is generated using default values.
+
+```
+$ mvn archetype:generate \
+      -Pczechidm-public-repo \
+      -DinteractiveMode=false \
+      -DarchetypeGroupId=eu.bcvsolutions.idm \
+      -DarchetypeArtifactId=idm-module-archetype \
+      -DarchetypeVersion=1.0.8 \
+      -DartifactId=idm-dojo \
+      -Dmid=dojo \
+      -Dmn=Dojo
 ```
 
 ### After run command
@@ -119,7 +137,7 @@ Archetype generate frontend module as part of backend module. You can easily cop
 In newly generated project exists unless pom.xml in root of your project, please remove this pom.xml, example:
 
 ```
-./idm-<your-artefact-id>/
+./idm-<mid>/
  ├── Realization/
  |   ├── frontend
  |   └── backend
@@ -127,7 +145,7 @@ In newly generated project exists unless pom.xml in root of your project, please
 ```
 
 Example remove pom (linux based system):
-``$ rm /idm-<your-artefact-id>/pom.xml``
+``$ rm /idm-<mid>/pom.xml``
 
  ## License
 
@@ -139,4 +157,4 @@ Example remove pom (linux based system):
   * create second archetype for create app project (FE+BE).
 
   ## Know issues
-  * now isn't possible modify groupId for your project, becouse CzechIdM application doesn't support another groupId than **eu.bcvsolutions.idm**
+  * now isn't possible modify groupId for your project, becouse CzechIdM application doesn't support another groupId than **eu.bcvsolutions.idm** => based on component scanning starts under this package.
