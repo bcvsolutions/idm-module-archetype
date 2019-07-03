@@ -48,6 +48,13 @@
 				<role>Developer</role>
 			</roles>
 		</developer>
+		<developer>
+			<id>RT</id>
+			<name>Radek Tomiška</name>
+			<roles>
+				<role>Developer</role>
+			</roles>
+		</developer>
 	</developers>
 
 	<description>Archetype for generating skeleton application for new project module (including frontend module).</description>
