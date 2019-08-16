@@ -69,7 +69,7 @@ $ mvn archetype:generate \
       -DinteractiveMode=false \
       -DarchetypeGroupId=eu.bcvsolutions.idm \
       -DarchetypeArtifactId=idm-module-archetype \
-      -DarchetypeVersion=1.0.9 \
+      -DarchetypeVersion=1.1.0 \
       -DartifactId=<artefact-id> \
       -Dmid=<module-identifier> \
       -Dmn=<module-name> \
@@ -101,7 +101,7 @@ $ mvn archetype:generate \
       -DinteractiveMode=false \
       -DarchetypeGroupId=eu.bcvsolutions.idm \
       -DarchetypeArtifactId=idm-module-archetype \
-      -DarchetypeVersion=1.0.9 \
+      -DarchetypeVersion=1.1.0 \
       -DartifactId=idm-dojo \
       -Dmid=dojo \
       -Dmn=Dojo \
@@ -120,7 +120,7 @@ $ mvn archetype:generate \
       -DinteractiveMode=false \
       -DarchetypeGroupId=eu.bcvsolutions.idm \
       -DarchetypeArtifactId=idm-module-archetype \
-      -DarchetypeVersion=1.0.9 \
+      -DarchetypeVersion=1.1.0 \
       -DartifactId=idm-dojo \
       -Dmid=dojo \
       -Dmn=Dojo
