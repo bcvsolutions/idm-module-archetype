@@ -6,7 +6,7 @@
 
 	<groupId>eu.bcvsolutions.idm</groupId>
 	<artifactId>idm-module-archetype</artifactId>
-	<version>1.0.9-SNAPSHOT</version>
+	<version>1.0.9</version>
 	<packaging>maven-archetype</packaging>
 
 	<name>idm-module-archetype</name>
@@ -33,6 +33,7 @@
 				  <version>3.0.2</version>
 				  <configuration>
 				    <addDefaultExcludes>false</addDefaultExcludes>
+						<includeEmptyDirs>true</includeEmptyDirs>
 				  </configuration>
 				</plugin>
 			</plugins>

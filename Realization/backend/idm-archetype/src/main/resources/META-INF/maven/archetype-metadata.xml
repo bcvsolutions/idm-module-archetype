@@ -19,7 +19,7 @@
 			<defaultValue>Dojo</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="czechIdMVersion">
-			<defaultValue>9.6.6</defaultValue>
+			<defaultValue>9.7.3</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="groupId">
 			<defaultValue>eu.bcvsolutions.idm</defaultValue>
@@ -36,7 +36,7 @@
 		<fileSet filtered="true" packaged="false" encoding="UTF-8">
 			<directory>Realization</directory>
 			<includes>
-				<include>**/*.*</include>
+				<include>**/**</include>
 				<include>**/.gitignore</include>
 			</includes>
 		</fileSet>
