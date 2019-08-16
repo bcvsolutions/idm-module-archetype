@@ -8,7 +8,7 @@ module.exports = {
   mainRouteFile: 'routes.js',
   mainComponentDescriptorFile: 'component-descriptor.js',
   mainLocalePath: 'src/locales/',
-  navigation': {
+  navigation: {
     items: [
     ]
   }
