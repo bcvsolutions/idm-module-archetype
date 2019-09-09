@@ -1,5 +1,5 @@
 # CzechIdM module archetype
-Archetype generate basic skeleton application for our devstack, including backend and frontend module.
+Archetype generate basic **module skeleton** for our devstack, including backend and frontend module.
 
 With this archetype you can easily generate app skeleton. With this folder structure:
 
