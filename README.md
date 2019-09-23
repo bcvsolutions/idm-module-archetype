@@ -91,7 +91,7 @@ $ mvn archetype:generate \
 | **-Dmn**   | **Short name of your new module**. Usage of ``mid`` with the first uppercase  letter is preferred.  Three letters preferred. Used as classes prefix.  | Dojo  | ☑  | ☑ |
 | **-Dauthor**   | You :)  | BCV solutions s.r.o.  |  ☑ | ☑ |
 | **-Dversion**   | Version of your new module  | 1.0.0-SNAPSHOT  | ☑  | ☑ |
-| **-DczechIdMVersion**   | Version for dependency on CzechIdM product.   | 9.7.3  | ☑ | ☑  |
+| **-DczechIdMVersion**   | Version for dependency on CzechIdM product.   | 9.7.7  | ☑ | ☑  |
 
 **Full example:**
 
@@ -107,7 +107,7 @@ $ mvn archetype:generate \
       -Dmn=Dojo \
       -Dauthor='Awesome developer' \
       -Dversion=1.0.0-SNAPSHOT \
-      -DczechIdMVersion=9.7.3
+      -DczechIdMVersion=9.7.7
 ```
 
 **Minimalistic example:**
