@@ -33,7 +33,7 @@ import ${czechIdMGroupId}.core.api.config.flyway.IdmFlywayAutoConfiguration;
 @PropertySource("classpath:/flyway-${mid}.properties")
 public class ${mn}FlywayConfig extends AbstractFlywayConfiguration {
 
-	private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(${mn}FlywayConfig.class);
+	private static final org.slf4j.Logger LOG = org.slf4j.LoggerFactory.getLogger(${mn}FlywayConfig.class);
 
 	@Bean
 	@DependsOn("flywayCore")
@@ -42,7 +42,7 @@ public class ${mn}FlywayConfig extends AbstractFlywayConfiguration {
 	@ConfigurationProperties(prefix = "flyway.${mid}")
 	public Flyway flywayModule${mn}() {
 		Flyway flyway = super.createFlyway();
-		log.info("Starting flyway migration for ${mid} module [{}]: ", flyway.getTable());
+		LOG.info("Starting flyway migration for ${mid} module [{}]: ", flyway.getConfiguration().getTable());
 		return flyway;
 	}
 }

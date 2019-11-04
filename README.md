@@ -93,6 +93,22 @@ $ mvn archetype:generate \
 | **-Dversion**   | Version of your new module  | 1.0.0-SNAPSHOT  | ☑  | ☑ |
 | **-DczechIdMVersion**   | Version for dependency on CzechIdM product.   | 9.7.7  | ☑ | ☑  |
 
+**Minimalistic example:**
+
+Archetype is placed in public maven repository, **Dojo** module is generated using default values.
+
+```
+$ mvn archetype:generate \
+      -Pczechidm-public-repo \
+      -DinteractiveMode=false \
+      -DarchetypeGroupId=eu.bcvsolutions.idm \
+      -DarchetypeArtifactId=idm-module-archetype \
+      -DarchetypeVersion=1.1.0 \
+      -DartifactId=idm-dojo \
+      -Dmid=dojo \
+      -Dmn=Dojo
+```
+
 **Full example:**
 
 ```
@@ -108,22 +124,6 @@ $ mvn archetype:generate \
       -Dauthor='Awesome developer' \
       -Dversion=1.0.0-SNAPSHOT \
       -DczechIdMVersion=9.7.7
-```
-
-**Minimalistic example:**
-
-Archetype is placed in public maven repository, **Dojo** module is generated using default values.
-
-```
-$ mvn archetype:generate \
-      -Pczechidm-public-repo \
-      -DinteractiveMode=false \
-      -DarchetypeGroupId=eu.bcvsolutions.idm \
-      -DarchetypeArtifactId=idm-module-archetype \
-      -DarchetypeVersion=1.1.0 \
-      -DartifactId=idm-dojo \
-      -Dmid=dojo \
-      -Dmn=Dojo
 ```
 
 ### After run command

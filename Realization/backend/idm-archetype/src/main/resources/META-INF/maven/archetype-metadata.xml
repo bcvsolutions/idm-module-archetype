@@ -19,7 +19,7 @@
 			<defaultValue>Dojo</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="czechIdMVersion">
-			<defaultValue>9.7.7</defaultValue>
+			<defaultValue>10.0.0-SNAPSHOT</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="groupId">
 			<defaultValue>eu.bcvsolutions.idm</defaultValue>
