@@ -6,6 +6,7 @@ package ${groupId}.${mid}.config.domain;
 import java.util.ArrayList;
 import java.util.List;
 
+import ${czechIdMGroupId}.core.api.script.ScriptEnabled;
 import ${czechIdMGroupId}.core.api.service.Configurable;
 
 /**
@@ -13,7 +14,7 @@ import ${czechIdMGroupId}.core.api.service.Configurable;
  *
  * @author ${author}
  */
-public interface ${mn}Configuration extends Configurable {
+public interface ${mn}Configuration extends Configurable, ScriptEnabled {
 
 	@Override
 	default String getConfigurableType() {

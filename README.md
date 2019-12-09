@@ -69,7 +69,7 @@ $ mvn archetype:generate \
       -DinteractiveMode=false \
       -DarchetypeGroupId=eu.bcvsolutions.idm \
       -DarchetypeArtifactId=idm-module-archetype \
-      -DarchetypeVersion=1.1.0 \
+      -DarchetypeVersion=1.3.0 \
       -DartifactId=<artefact-id> \
       -Dmid=<module-identifier> \
       -Dmn=<module-name> \
@@ -91,7 +91,7 @@ $ mvn archetype:generate \
 | **-Dmn**   | **Short name of your new module**. Usage of ``mid`` with the first uppercase  letter is preferred.  Three letters preferred. Used as classes prefix.  | Dojo  | ☑  | ☑ |
 | **-Dauthor**   | You :)  | BCV solutions s.r.o.  |  ☑ | ☑ |
 | **-Dversion**   | Version of your new module  | 1.0.0-SNAPSHOT  | ☑  | ☑ |
-| **-DczechIdMVersion**   | Version for dependency on CzechIdM product.   | 9.7.7  | ☑ | ☑  |
+| **-DczechIdMVersion**   | Version for dependency on CzechIdM product.   | 10.0.0  | ☑ | ☑  |
 
 **Minimalistic example:**
 
@@ -103,7 +103,7 @@ $ mvn archetype:generate \
       -DinteractiveMode=false \
       -DarchetypeGroupId=eu.bcvsolutions.idm \
       -DarchetypeArtifactId=idm-module-archetype \
-      -DarchetypeVersion=1.1.0 \
+      -DarchetypeVersion=1.3.0 \
       -DartifactId=idm-dojo \
       -Dmid=dojo \
       -Dmn=Dojo
@@ -117,13 +117,13 @@ $ mvn archetype:generate \
       -DinteractiveMode=false \
       -DarchetypeGroupId=eu.bcvsolutions.idm \
       -DarchetypeArtifactId=idm-module-archetype \
-      -DarchetypeVersion=1.1.0 \
+      -DarchetypeVersion=1.3.0 \
       -DartifactId=idm-dojo \
       -Dmid=dojo \
       -Dmn=Dojo \
       -Dauthor='Awesome developer' \
       -Dversion=1.0.0-SNAPSHOT \
-      -DczechIdMVersion=9.7.7
+      -DczechIdMVersion=10.0.0
 ```
 
 ### After run command

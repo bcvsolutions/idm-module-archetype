@@ -19,7 +19,7 @@
 			<defaultValue>Dojo</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="czechIdMVersion">
-			<defaultValue>10.0.0-SNAPSHOT</defaultValue>
+			<defaultValue>10.0.0</defaultValue>
 		</requiredProperty>
 		<requiredProperty key="groupId">
 			<defaultValue>eu.bcvsolutions.idm</defaultValue>
@@ -38,6 +38,18 @@
 			<includes>
 				<include>**/**</include>
 				<include>**/.gitignore</include>
+			</includes>
+			<excludes>
+				<exclude>**/logback.xml</exclude>
+				<exclude>**/logback.xml</exclude>
+				<exclude>**/*.xsd</exclude>
+			</excludes>
+		</fileSet>
+		<fileSet filtered="false" packaged="false" encoding="UTF-8">
+			<directory>Realization</directory>
+			<includes>
+				<include>**/logback.xml</include>
+				<include>**/*.xsd</include>
 			</includes>
 		</fileSet>
 		<!-- TODO exlude root pom.xml -->
