@@ -25,15 +25,30 @@
 	</properties>
 
 	<repositories>
-    	<repository>
-            <id>nexus-public-releases</id>
-            <url>https://nexus.bcvsolutions.eu/repository/maven-public-releases/</url>
-        </repository>
-        <repository>
-            <id>nexus-releases</id>
-            <url>https://nexus.bcvsolutions.eu/repository/maven-releases/</url>
-        </repository>
-    </repositories>
+		<repository>
+			<id>nexus-public-releases</id>
+			<url>https://nexus.bcvsolutions.eu/repository/maven-public-releases/</url>
+		</repository>
+		<repository>
+			<id>nexus-releases</id>
+			<url>https://nexus.bcvsolutions.eu/repository/maven-releases/</url>
+		</repository>
+	</repositories>
+
+	<dependencies>
+		<dependency>
+			<groupId>${czechIdMGroupId}</groupId>
+			<artifactId>idm-core-impl</artifactId>
+			<version>${czechidm-version}</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>${czechIdMGroupId}</groupId>
+			<artifactId>idm-core-test-api</artifactId>
+			<version>${czechidm-version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<plugins>
@@ -52,23 +67,54 @@
 					</archive>
 				</configuration>
 			</plugin>
+			<plugin>
+				<artifactId>maven-resources-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>copy-fe-sources</id>
+						<phase>validate</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<outputDirectory>target/idm/fe-sources/czechidm-modules</outputDirectory>
+							<resources>
+								<resource>
+									<directory>../../frontend</directory>
+									<filtering>false</filtering>
+									<excludes>
+										<exclude>**/.*</exclude>
+									</excludes>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
 		</plugins>
+		<resources>
+			<resource>
+				<filtering>false</filtering>
+				<directory>src/main/resources</directory>
+				<excludes>
+					<exclude>application.properties</exclude>
+					<exclude>module-*.properties</exclude>
+				</excludes>
+			</resource>
+			<resource>
+				<filtering>true</filtering>
+				<directory>src/main/resources</directory>
+				<includes>
+					<include>application.properties</include>
+					<include>module-*.properties</include>
+				</includes>
+			</resource>
+			<resource>
+				<filtering>false</filtering>
+				<directory>target/idm</directory>
+			</resource>
+		</resources>
 	</build>
-
-	<dependencies>
-		<dependency>
-			<groupId>${czechIdMGroupId}</groupId>
-			<artifactId>idm-core-impl</artifactId>
-			<version>${czechidm-version}</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>${czechIdMGroupId}</groupId>
-			<artifactId>idm-core-test-api</artifactId>
-			<version>${czechidm-version}</version>
-			<scope>test</scope>
-		</dependency>
-	</dependencies>
 
 	<profiles>
 		<profile>
