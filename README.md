@@ -69,7 +69,7 @@ $ mvn archetype:generate \
       -DinteractiveMode=false \
       -DarchetypeGroupId=eu.bcvsolutions.idm \
       -DarchetypeArtifactId=idm-module-archetype \
-      -DarchetypeVersion=1.3.0 \
+      -DarchetypeVersion=1.3.1 \
       -DartifactId=<artefact-id> \
       -Dmid=<module-identifier> \
       -Dmn=<module-name> \
@@ -91,7 +91,7 @@ $ mvn archetype:generate \
 | **-Dmn**   | **Short name of your new module**. Usage of ``mid`` with the first uppercase  letter is preferred.  Three letters preferred. Used as classes prefix.  | Dojo  | ☑  | ☑ |
 | **-Dauthor**   | You :)  | BCV solutions s.r.o.  |  ☑ | ☑ |
 | **-Dversion**   | Version of your new module  | 1.0.0-SNAPSHOT  | ☑  | ☑ |
-| **-DczechIdMVersion**   | Version for dependency on CzechIdM product.   | 10.0.0  | ☑ | ☑  |
+| **-DczechIdMVersion**   | Version for dependency on CzechIdM product.   | 10.0.1  | ☑ | ☑  |
 
 **Minimalistic example:**
 
@@ -103,7 +103,7 @@ $ mvn archetype:generate \
       -DinteractiveMode=false \
       -DarchetypeGroupId=eu.bcvsolutions.idm \
       -DarchetypeArtifactId=idm-module-archetype \
-      -DarchetypeVersion=1.3.0 \
+      -DarchetypeVersion=1.3.1 \
       -DartifactId=idm-dojo \
       -Dmid=dojo \
       -Dmn=Dojo
@@ -117,13 +117,13 @@ $ mvn archetype:generate \
       -DinteractiveMode=false \
       -DarchetypeGroupId=eu.bcvsolutions.idm \
       -DarchetypeArtifactId=idm-module-archetype \
-      -DarchetypeVersion=1.3.0 \
+      -DarchetypeVersion=1.3.1 \
       -DartifactId=idm-dojo \
       -Dmid=dojo \
       -Dmn=Dojo \
       -Dauthor='Awesome developer' \
       -Dversion=1.0.0-SNAPSHOT \
-      -DczechIdMVersion=10.0.0
+      -DczechIdMVersion=10.0.1
 ```
 
 ### After run command
@@ -154,7 +154,6 @@ Example remove pom (linux based system):
   ## TODO`s
 
   * Create script for generate archetype (via maven) and then remove unless pom.xml,
-  * create second archetype for create app project (FE+BE).
 
   ## Know issues
-  * now isn't possible modify groupId for your project, becouse CzechIdM application doesn't support another groupId than **eu.bcvsolutions.idm** => based on component scanning starts under this package.
+  * now isn't possible modify groupId for your project, because CzechIdM application doesn't support another groupId than **eu.bcvsolutions.idm** => based on component scanning starts under this package.
